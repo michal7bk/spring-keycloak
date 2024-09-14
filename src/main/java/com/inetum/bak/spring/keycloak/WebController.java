@@ -9,9 +9,13 @@ import java.security.Principal;
 @Controller
 public class WebController {
 
-
     @GetMapping(path = "/currentUser")
     public ResponseEntity currentUser(Principal principal) {
         return ResponseEntity.ok(principal);
+    }
+
+    @GetMapping(path = "/public")
+    public ResponseEntity notAuthorizedResource() {
+        return ResponseEntity.ok("Access to public resource.");
     }
 }

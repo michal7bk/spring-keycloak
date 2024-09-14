@@ -1,6 +1,4 @@
-
 # Keycloak
-https://www.baeldung.com/spring-boot-keycloak
 https://docs.google.com/presentation/d/1n8i2Ay7hadwSGNzhRiAVWqT8ARuYkHXMGMMt4cEBuwE/edit#slide=id.p
 
 To start local keycloak
@@ -9,14 +7,12 @@ To start local keycloak
 http://localhost:8080/admin/master/console/#/myrealm/clients
 admin:admin
 
-
 Realm ID: myrealm
 Client ID: myclient
 role: reader
 users: michal:1qaz@WSX
 
 # Spring-boot
-
 http://localhost:8081/currentUser
 
 # Postman
