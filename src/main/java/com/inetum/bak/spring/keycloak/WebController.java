@@ -13,11 +13,11 @@ public class WebController {
 
     @GetMapping(path = "/currentUser")
     public ResponseEntity currentUser(Principal principal) {
-        return ResponseEntity.ok(format("Hello %s from protected resource", principal.getName()));
+        return ResponseEntity.ok(format("Hello authenticated user %s from authorized resource", principal.getName()));
     }
 
     @GetMapping(path = "/public")
-    public ResponseEntity notAuthorizedResource() {
-        return ResponseEntity.ok("Public resource.");
+    public ResponseEntity notAuthorizedResource(Principal principal) {
+        return ResponseEntity.ok(format("Hello authenticated user %s from NOT authorized resource", principal.getName()));
     }
 }
