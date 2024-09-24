@@ -1,19 +1,17 @@
-# Keycloak
-https://docs.google.com/presentation/d/1n8i2Ay7hadwSGNzhRiAVWqT8ARuYkHXMGMMt4cEBuwE/edit#slide=id.p
+### Simple application which is able to integrate as OAuth2 Client with Keycloak, and can provide functionality as a Resource Server.
+# Keycloak download
+https://www.keycloak.org/downloads
 
 To start local keycloak
 > ~/projects/inetum-presentation/keycloak-25.0.2/bin$ ./kc.sh start-dev --log-level=DEBUG
 
+# Master realm with default credentials:
 http://localhost:8080/admin/master/console/#/myrealm/clients
 admin:admin
 
-Realm ID: myrealm
-Client ID: myclient
-role: reader
-users: michal:1qaz@WSX
-
 # Spring-boot
-http://localhost:8081/currentUser
+API require authentication and authorization: http://localhost:8081/currentUser
+API require authentication: http://localhost:8081/public
 
 # Postman
 Token Name
